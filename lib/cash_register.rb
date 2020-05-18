@@ -12,7 +12,14 @@ class CashRegister
   end
 
   def add_item(title, price, quantity = 1)
-    @items << title
+    counter = 0
+      while counter < quantity
+        @items << title
+        counter += 1
+      end
+    else
+      @items << title
+    end
     @last_transaction = price * quantity
     @title = title
     @price = @last_transaction
@@ -33,7 +40,7 @@ class CashRegister
   end
 
   def items
-    @items.uniq
+    @items
   end
 
 end
