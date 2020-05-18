@@ -24,7 +24,7 @@ class CashRegister
       puts "After the discount, the total comes to $#{discount_price}"
     else
       puts "There is no discount to apply."
-    end 
+    end
   end
 
 
